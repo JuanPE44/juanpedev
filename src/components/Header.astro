@@ -94,15 +94,15 @@ import Container from "./Container.astro";
 
   menuA.forEach((a) => {
     a.addEventListener("click", () => {
-      menu.classList.toggle("translate-x-full");
-      close.classList.toggle("hidden");
-      open.classList.toggle("hidden");
+      menu?.classList.toggle("translate-x-full");
+      close?.classList.toggle("hidden");
+      open?.classList.toggle("hidden");
     });
   });
 
-  menuIcon.addEventListener("click", () => {
-    menu.classList.toggle("translate-x-full");
-    close.classList.toggle("hidden");
-    open.classList.toggle("hidden");
+  menuIcon?.addEventListener("click", () => {
+    menu?.classList.toggle("translate-x-full");
+    close?.classList.toggle("hidden");
+    open?.classList.toggle("hidden");
   });
 </script>
