@@ -1,0 +1,43 @@
+---
+import Section from "./Section.astro";
+import Container from "./Container.astro";
+import Button from "./Button.astro";
+---
+
+<Section>
+  <Container>
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:gap-12 items-center">
+      <div class="flex flex-col justify-center space-y-4">
+        <div class="space-y-2">
+          <h1
+            class="text-5xl mt-10 sm:nt-0 font-bold tracking-tighter xl:text-6xl/none text-black drop-shadow-lg"
+          >
+            <span class="text-rainbow">Transforma</span> tu presencia online
+          </h1>
+          <p
+            class="max-w-[600px] text-gray-700 md:text-lg lg:text-xl drop-shadow pb-4"
+          >
+            Creamos sitios web eficientes y atractivos. Impulsa tu negocio con
+            nuestros servicios de diseño y desarrollo web.
+          </p>
+        </div>
+        <div class="flex gap-2">
+          <Button
+            styles="bg-size-1 bg-gradient-to-br from-[#742DFF] via-[#FB5C83] to-[#3E74AE] text-white border-none px-14"
+            >Planes
+          </Button>
+          <Button styles="border-black text-black bg-white">Contacto</Button>
+        </div>
+      </div>
+      <div class="justify-center lg:justify-end hidden sm:flex">
+        <div class="relative w-full aspect-[3/2] laptop-animation">
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/B-Mockups,%20PSD-Recuperado-u61Zhcqw00VcJbv4mAihPdYg3nmhh3.png"
+            alt="Modern laptop with colorful gradient display"
+            class="object-cover rounded-lg transform rotate-[-17deg]"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</Section>

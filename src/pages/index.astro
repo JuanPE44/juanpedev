@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Main from "../components/Main.astro";
+import Servises from "../components/Servises.astro";
+import Works from "../components/Works.astro";
+import Testimonials from "../components/Testimonials.astro";
+import Pricing from "../components/Plan.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-1">
+      <Main />
+      a
+      <Servises />
+      <Works />
+      <Testimonials />
+      <Pricing />
+      <Contact />
+      <Footer />
+    </main>
+  </div>
+</Layout>

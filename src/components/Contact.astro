@@ -1,0 +1,45 @@
+---
+import Section from "./Section.astro";
+import Container from "./Container.astro";
+---
+
+<Section
+  background=" bg-gradient-to-br from-[#742DFF] via-[#FB5C83] to-[#3E74AE]"
+>
+  <Container>
+    <div class="flex flex-col items-center space-y-4 text-center">
+      <div class="space-y-2">
+        <h2
+          class="text-3xl font-bold tracking-tighter sm:text-5xl text-white drop-shadow-lg"
+        >
+          ¿Listo para empezar?
+        </h2>
+        <p
+          class="max-w-[600px] text-gray-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed drop-shadow"
+        >
+          Analicemos su proyecto y creemos un sitio web que genere resultados
+          para su negocio
+        </p>
+      </div>
+      <div class="w-full max-w-sm space-y-2">
+        <form class="flex flex-col gap-2">
+          <input
+            placeholder="Tu nombre"
+            class="outline-none bg-white/30 text-white placeholder-white/70 border-white/50 focus:border-white rounded-full px-4 py-2"
+          />
+          <input
+            type="email"
+            placeholder="Tu email"
+            class="outline-none bg-white/30 text-white placeholder-white/70 border-white/50 focus:border-white rounded-full px-4 py-2"
+          />
+          <button
+            type="submit"
+            class="bg-white hover:bg-red-100 shadow-md transition-all hover:shadow-lg font-semibold px-6 py-3 rounded-full"
+          >
+            <span class="text-rainbow">Enviar</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </Container>
+</Section>

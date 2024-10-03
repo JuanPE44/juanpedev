@@ -1,0 +1,110 @@
+---
+import Section from "./Section.astro";
+import Container from "./Container.astro";
+import CardPlan from "./CardPlan.astro";
+import H2 from "./H2.astro";
+---
+
+<Section>
+  <Container>
+    <H2 color="#FB5C83">Planes</H2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <CardPlan
+        title="Landing Page"
+        description="Ideal para pequeñas empresas, emprendedores o productos que necesiten una presencia básica en línea."
+        caracteristics={[
+          "Página única de desplazamiento",
+          "Secciones personalizadas",
+          "Diseño responsivo",
+          "Integración con redes sociales.",
+          "Formulario de contacto básico.",
+          "Optimización básica SEO.",
+        ]}
+        color="#742dff"
+      />
+      <CardPlan
+        title="Empresarial"
+        description="Ideal para negocios medianos que necesiten más contenido y funcionalidades."
+        caracteristics={[
+          "Hasta 8 páginas ",
+          "Diseño responsivo.",
+          "Integración con redes sociales.",
+          "Formularios personalizados ",
+          "Optimización SEO avanzada.",
+          "Google Analytics integrado.",
+        ]}
+        color="#fb5c83"
+        style="border-2 border-[#fb5c83]"
+      />
+      <CardPlan
+        title="A medida"
+        description="Soluciones personalizadas según las necesidades específicas del cliente."
+        caracteristics={[
+          "Diseño y funcionalidad completamente personalizados",
+          "Desarrollo de módulos y sistemas a medida ",
+          "Integración con APIs externas.",
+          "Optimización SEO avanzada y consultoría.",
+          "Panel de administración personalizado.",
+          "Soporte post-lanzamiento extendido.",
+        ]}
+        color="#3e74ae"
+      />
+      <!--
+      <div
+        class="flex flex-col p-6 bg-white rounded-lg shadow-lg border-2 border-[#FB5C83]"
+      >
+        <h3 class="text-2xl font-bold mb-4">Empresarial</h3>
+        <p class="text-4xl font-bold mb-4 text-[#FB5C83]">$1,999</p>
+        <ul class="mb-6 space-y-2">
+          <li class="flex items-center">
+            <span class="h-5 w-5 mr-2 text-[#FB5C83]"></span>
+            10-page website
+          </li>
+          <li class="flex items-center">
+            <span class="h-5 w-5 mr-2 text-[#FB5C83]"></span>
+            Responsive design
+          </li>
+          <li class="flex items-center">
+            <span class="h-5 w-5 mr-2 text-[#FB5C83]"></span>
+            Advanced SEO
+          </li>
+          <li class="flex items-center">
+            <span class="h-5 w-5 mr-2 text-[#FB5C83]"></span>
+            E-commerce functionality
+          </li>
+        </ul>
+        <button
+          class="text-white mt-auto bg-[#FB5C83] hover:bg-[#fa3d6d] shadow-md transition-all hover:shadow-lg backdrop-blur-sm font-semibold px-6 py-3 rounded-full z-10"
+          >Choose Plan</button
+        >
+      </div>
+
+      <div
+        class="flex flex-col p-6 bg-white rounded-lg shadow-lg border border-gray-200"
+      >
+        <h3 class="text-2xl font-bold mb-4">A medida</h3>
+        <p class="text-4xl font-bold mb-4 text-[#3E74AE]">Custom</p>
+        <ul class="mb-6 space-y-2">
+          <li class="flex items-center">
+            <span class="h-5 w-5 mr-2 text-[#3E74AE]"></span>
+            Custom website
+          </li>
+          <li class="flex items-center">
+            <span class="h-5 w-5 mr-2 text-[#3E74AE]"></span>
+            Advanced features
+          </li>
+          <li class="flex items-center">
+            <span class="h-5 w-5 mr-2 text-[#3E74AE]"></span>
+            Dedicated support
+          </li>
+        </ul>
+        <button
+          class="text-white mt-auto bg-[#3E74AE] hover:bg-[#325d8c] shadow-md transition-all hover:shadow-lg backdrop-blur-sm font-semibold px-6 py-3 rounded-full z-10"
+          >Contact Us</button
+        >
+      </div>
+      -->
+    </div>
+  </Container>
+</Section>

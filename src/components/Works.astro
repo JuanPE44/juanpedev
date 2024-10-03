@@ -1,0 +1,20 @@
+---
+import Section from "./Section.astro";
+import CardWork from "./CardWork.astro";
+import Container from "./Container.astro";
+import imgMamparas from "../../public/images/mamparas.png";
+import imgEstudio from "../../public/images/estudio.png";
+import imgAgacech from "../../public/images/pagina.png";
+import H2 from "./H2.astro";
+---
+
+<Section>
+  <Container>
+    <H2 color="var(--color-terceary)">Nuestros trabajos</H2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+      <CardWork title="Mamparas Esmeralda" img={imgMamparas} />
+      <CardWork title="Estudio contable" img={imgEstudio} />
+      <CardWork title="Agacech" img={imgAgacech} />
+    </div>
+  </Container>
+</Section>

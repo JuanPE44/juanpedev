@@ -1,0 +1,15 @@
+---
+interface Props {
+  styles?: string;
+}
+
+const {
+  styles = "bg-white text-[#742DFF]  border-[#742DFF] hover:bg-[#742DFF]",
+} = Astro.props;
+---
+
+<button
+  class={` duration-300 px-6 py-3 rounded-full border-[1px] hover:shadow-lg transition-[0.5s] hover:shadow-[#fb5c8450] font-semibold cursor-pointer hover:scale-105 z-10 ${styles}`}
+>
+  <slot />
+</button>

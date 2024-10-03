@@ -1,0 +1,88 @@
+---
+import Section from "./Section.astro";
+import Container from "./Container.astro";
+import H2 from "./H2.astro";
+---
+
+<Section background="bg-gray-50">
+  <Container>
+    <H2 color="#742DFF">Servicios</H2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div
+        class="flex flex-col justify-between items-center text-center bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+      >
+        <div
+          class="bg-gradient-to-br from-[#742DFF] to-[#FB5C83] p-3 rounded-full mb-6"
+        >
+          <svg class="w-8 h-8" viewBox="0 0 256 256"
+            ><path
+              fill="#ffffff"
+              d="M104 40H56a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16m0 64H56V56h48zm96-64h-48a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16V56a16 16 0 0 0-16-16m0 64h-48V56h48zm-96 32H56a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16v-48a16 16 0 0 0-16-16m0 64H56v-48h48zm96-64h-48a16 16 0 0 0-16 16v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16v-48a16 16 0 0 0-16-16m0 64h-48v-48h48z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-[#742DFF]">Diseño web</h3>
+        <p class="text-gray-600 mb-6">
+          Diseños modernos y responsivos que cautivan a su audiencia y mejoran
+          la experiencia del usuario.
+        </p>
+        <button
+          class="text-[#742DFF] border-[#742DFF] hover:bg-[#742DFF] hover:text-white transition-colors duration-300 px-6 py-3 rounded-full border-[1px]"
+        >
+          Ver mas
+        </button>
+      </div>
+      <div
+        class="flex flex-col justify-between items-center text-center bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+      >
+        <div
+          class="bg-gradient-to-br from-[#FB5C83] to-[#3E74AE] p-3 rounded-full mb-6"
+        >
+          <svg class="w-8 h-8" viewBox="0 0 24 24"
+            ><path
+              fill="#ffffff"
+              d="m8 18l-6-6l6-6l1.425 1.425l-4.6 4.6L9.4 16.6zm8 0l-1.425-1.425l4.6-4.6L14.6 7.4L16 6l6 6z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-[#FB5C83]">Desarrollo web</h3>
+        <p class="text-gray-600 mb-6">
+          Sitios web robustos y escalables creados con tecnologías de vanguardia
+          para rendimiento óptimo.
+        </p>
+        <button
+          class="text-[#FB5C83] border-[#FB5C83] hover:bg-[#FB5C83] hover:text-white transition-colors duration-300 px-6 py-3 rounded-full border-[1px]"
+        >
+          Ver mas
+        </button>
+      </div>
+      <div
+        class="flex justify-between flex-col items-center text-center bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
+      >
+        <div
+          class="bg-gradient-to-br from-[#3E74AE] to-[#742DFF] p-3 rounded-full mb-6"
+        >
+          <svg class="w-8 h-8" viewBox="0 0 256 256"
+            ><path
+              fill="#ffffff"
+              d="M215.79 118.17a8 8 0 0 0-5-5.66L153.18 90.9l14.66-73.33a8 8 0 0 0-13.69-7l-112 120a8 8 0 0 0 3 13l57.63 21.61l-14.62 73.25a8 8 0 0 0 13.69 7l112-120a8 8 0 0 0 1.94-7.26M109.37 214l10.47-52.38a8 8 0 0 0-5-9.06L62 132.71l84.62-90.66l-10.46 52.38a8 8 0 0 0 5 9.06l52.8 19.8Z"
+            ></path></svg
+          >
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-[#3E74AE]">
+          Optimización del rendimiento
+        </h3>
+        <p class="text-gray-600 mb-6">
+          Sitios web ultrarrápidos que tienen una clasificación más alta,
+          realizan mejores conversiones y brindan experiencias de usuario
+          superiores.
+        </p>
+        <button
+          class="text-[#3E74AE] border-[#3E74AE] hover:bg-[#3E74AE] hover:text-white transition-colors duration-300 px-6 py-3 rounded-full border-[1px]"
+        >
+          Ver mas
+        </button>
+      </div>
+    </div>
+  </Container>
+</Section>

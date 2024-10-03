@@ -1,0 +1,49 @@
+---
+import Image from "astro/components/Image.astro";
+
+interface Props {
+  title: string;
+  img: ImageMetadata;
+}
+
+const { title, img } = Astro.props;
+---
+
+<div
+  class="flex flex-col relative justify-between bg-white transition-all duration-300"
+>
+  <div class="relative shadow-lg rounded-xl overflow-hidden">
+    <div
+      class="w-full h-full absolute opacity-35 bg-gradient-to-br from-[#742DFF] via-[#6c6668] to-[#3E74AE]"
+    >
+    </div>
+    <Image src={img} alt="Mamparas" class="w-full object-cover aspect-video" />
+  </div>
+  <h3 class="text-xl md:text-3xl font-bold my-4 text-gray-800">{title}</h3>
+  <div class="flex justify-between items-center">
+    <div class="flex gap-3">
+      <div
+        class="border-[1px] border-[#FB5C83] text-[#FB5C83] px-3 py-1 rounded-full"
+      >
+        DISEÑO
+      </div>
+      <div
+        class="border-[1px] border-[#FB5C83] text-[#FB5C83] px-3 py-1 rounded-full"
+      >
+        DESARROLLO
+      </div>
+    </div>
+    <a
+      href="https://www.mamparasesmeralda.com.ar"
+      target="_blank"
+      class="bg-gradient-to-br from-[#FB5C83] via-[#3E74AE] to-[#742DFF] px-3 py-1 rounded-full text-white font-semibold cursor-pointer hover:scale-105 z-10"
+    >
+      <svg class="w-6 h-6" viewBox="0 0 24 24"
+        ><path
+          fill="#ffffff"
+          d="M16.175 13H4v-2h12.175l-5.6-5.6L12 4l8 8l-8 8l-1.425-1.4z"
+        ></path></svg
+      >
+    </a>
+  </div>
+</div>

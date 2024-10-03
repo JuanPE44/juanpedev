@@ -1,0 +1,108 @@
+---
+import Button from "./Button.astro";
+import IconMenu from "./icons/IconMenu.astro";
+import IconClose from "./icons/IconClose.astro";
+import Container from "./Container.astro";
+---
+
+<header class="h-14 bg-white/90 backdrop-blur-md fixed w-full z-50">
+  <Container styles="flex items-center justify-between h-full">
+    <a class="flex items-center justify-center mr-auto" href="#">
+      <svg class="w-6 h-6" viewBox="0 0 33 40" fill="none">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M19.0442 1.02909C20.1004 1.00649 21.3012 0.905711 21.8987 1.28359V29.5327C21.9355 29.5497 21.9717 29.5667 22.0085 29.5836C23.7629 29.3958 25.9768 28.919 26.8392 27.853C28.968 25.2228 28.1572 15.4881 28.1566 10.7C28.1566 9.30711 27.7751 5.57644 28.3213 4.64294C29.08 4.45401 31.1495 4.32655 31.8894 4.64294C31.9076 8.23949 31.9259 11.8364 31.9443 15.4336C31.9449 23.9694 33.0686 30.6503 25.1923 32.1795C24.2915 32.3544 23.0328 32.7933 21.8438 32.5867C21.6388 32.4414 21.5548 32.3356 21.5144 32.0268H21.4595C20.8986 35.9372 17.7662 38.095 13.8292 38.9491C12.713 38.9659 11.5968 38.9829 10.4807 39C6.13561 38.3928 4.45096 38.0146 2.57588 35.0807C1.87609 33.9858 0.652112 32.4507 1.09374 30.6525L1.25842 30.6016C2.04626 30.3039 4.0706 30.4559 4.77166 30.6016C4.91804 31.1445 5.06442 31.6875 5.21081 32.2304C5.70371 33.4934 6.94333 34.7989 8.1751 35.3861C11.8609 37.1432 16.2242 35.3243 17.3973 32.7903L17.2327 32.6376C16.1424 32.6446 15.2093 32.4026 14.3233 32.2304L12.5666 32.1286C10.6993 31.7228 8.66877 30.2336 8.01042 28.6674C7.93723 28.2772 7.86403 27.887 7.79084 27.4967C7.42914 26.3598 7.05526 24.4186 7.40658 22.8649L7.68105 22.7122C8.45803 22.5052 10.2206 22.5842 10.7551 22.8649C11.4882 25.8099 10.6849 28.118 13.7194 29.0237C14.962 29.3946 17.2759 28.9979 18.2757 29.6345V29.5327C18.7664 28.3577 18.4403 24.571 18.4403 22.9667V8.155C18.4403 6.77868 18.1604 1.79284 18.6599 1.07999H18.7148L19.0442 1.02909Z"
+          fill="black"
+          stroke="#742DFF"
+          stroke-width="0.25"></path>
+      </svg>
+    </a>
+    <nav
+      class="gap-4 sm:gap-6 justify-center absolute top-0 w-full h-full items-center hidden sm:flex"
+    >
+      <a
+        class="text-sm font-medium hover:text-[#742DFF] transition-colors"
+        href="#contact"
+      >
+        Servicios
+      </a>
+      <a
+        class="text-sm font-medium hover:text-[#742DFF] transition-colors"
+        href="#contact"
+      >
+        Trabajos
+      </a>
+      <a
+        class="text-sm font-medium hover:text-[#742DFF] transition-colors"
+        href="#contact"
+      >
+        Planes
+      </a>
+      <a
+        class="text-sm font-medium hover:text-[#742DFF] transition-colors"
+        href="#contact"
+      >
+        Contacto
+      </a>
+    </nav>
+    <Button
+      styles="hidden sm:flex bg-size-1 bg-gradient-to-br from-[#FB5C83] via-[#742DFF]  to-[#3E74AE] text-white border-none"
+      >Empezar</Button
+    >
+
+    <div class="cursor-pointer sm:hidden transition-[0.5s]" id="menu-icon">
+      <div id="open">
+        <IconMenu />
+      </div>
+      <div id="close" class="hidden">
+        <IconClose />
+      </div>
+    </div>
+
+    <div
+      class="sm:hidden pb-20 bg-gradient-to-tr from-slate-600 to-[var(--color-primary)] p-10 flex flex-col translate-x-full justify-between absolute top-[100%] transition-[0.5s] right-0 w-5/6 h-[95vh] bg-white z-50"
+      id="menu"
+    >
+      <ul class="flex gap-4 flex-col text-white font-bold text-xl" id="menu-a">
+        <li><a href="/">Home</a></li>
+        <li><a href="/#productos">Productos</a></li>
+        <li><a href="/#empresa">La empresa</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+      <div>
+        <div class="flex gap-4">
+          <!--
+          <IconFacebook />
+          <IconInstagram />
+        
+          <IconX />
+          -->
+        </div>
+        <div></div>
+      </div>
+    </div>
+  </Container>
+</header>
+
+<script>
+  const menuIcon = document.getElementById("menu-icon");
+  const close = document.getElementById("close");
+  const open = document.getElementById("open");
+  const menu = document.getElementById("menu");
+  const menuA = document.querySelectorAll("#menu-a li a");
+
+  menuA.forEach((a) => {
+    a.addEventListener("click", () => {
+      menu.classList.toggle("translate-x-full");
+      close.classList.toggle("hidden");
+      open.classList.toggle("hidden");
+    });
+  });
+
+  menuIcon.addEventListener("click", () => {
+    menu.classList.toggle("translate-x-full");
+    close.classList.toggle("hidden");
+    open.classList.toggle("hidden");
+  });
+</script>

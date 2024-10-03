@@ -1,0 +1,11 @@
+---
+interface Props {
+  background?: string;
+}
+
+const { background = "bg-white" } = Astro.props;
+---
+
+<section class={`${background} w-full py-24 lg:py-32`}>
+  <slot />
+</section>
